@@ -67,11 +67,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database - SQLite for academic project
+#DATABASES = {
+#    'default': dj_database_url.config(
+#        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+#        conn_max_age=600,
+#    )
+#}
+
+import dj_database_url # Make sure this is imported at the top of settings.py if it isn't already
+
+# 1. Comment out your original local database for now:
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+#         conn_max_age=600,
+#     )
+# }
+
+# 2. Add this temporary connection to your live Render database:
 DATABASES = {
-    'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600,
-    )
+    'default': dj_database_url.parse('postgresql://lawyerdb_mmsy_user:4cyYvUGw2JwRAyevs9acNXxcJXTQx3td@dpg-d7l5ufgjs32c738b05gg-a.oregon-postgres.render.com/lawyerdb_mmsy')
 }
 
 # Custom User Model
