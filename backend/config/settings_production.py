@@ -29,6 +29,7 @@ DATABASES['default'] = dj_database_url.config(
 
 # CORS for production
 CORS_ALLOWED_ORIGINS = [
+    'https://lawyerportal.netlify.app',
     'https://*.netlify.app',
     'http://localhost:3000',
 ]

@@ -8,7 +8,7 @@
 5. ✅ [Complete] Edit backend/config/settings_production.py - Update CORS + imports for Render
 6. [Pending] Create frontend/.env.example with prod URL
 7. [Pending] Update README.md with deployment instructions
-✅ [Complete by user] Set Netlify env var VITE_API_BASE_URL=https://lawer-portal.onrender.com/api (required for prod build)
+✅ [Complete] Netlify: https://lawyerportal.netlify.app , set VITE_API_BASE_URL=https://lawer-portal.onrender.com/api
 9. [Pending] User: Push changes to trigger redeploys
 10. [Pending] Test login form end-to-end
 11. [Pending] Complete task

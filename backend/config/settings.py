@@ -108,6 +108,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5174',
     'http://127.0.0.1:5174',
     'https://*.netlify.app',
+    "https://lawyer-portal-system.netlify.app",
+    "http://localhost:5173", # Keep local vite port for testing
 ]
 
 # Static and Media
