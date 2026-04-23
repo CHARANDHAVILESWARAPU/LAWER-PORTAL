@@ -1,0 +1,12 @@
+Django==4.2.* 
+djangorestframework==3.14.*
+djangorestframework-simplejwt==5.3.*
+django-cors-headers==4.3.*
+pycryptodome==3.19.*
+Pillow==10.1.*
+openai>=1.0.0
+gunicorn==21.*
+psycopg2-binary==2.9.*
+whitenoise[runserver]==6.6.*
+dj-database-url==2.1.*
+python-dotenv==1.0.*

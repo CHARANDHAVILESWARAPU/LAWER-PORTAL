@@ -1,0 +1,144 @@
+/* ============================================
+   Video Consultation Styles
+   Matches existing Legal Portal theme
+   ============================================ */
+
+/* Page header */
+.vc-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.vc-page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+/* Tabs */
+.vc-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.vc-tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #718096;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+.vc-tab:hover {
+  color: #2c5282;
+}
+.vc-tab.active {
+  color: #2c5282;
+  border-bottom-color: #3182ce;
+  font-weight: 600;
+}
+
+/* Slot grid */
+.vc-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+.vc-slot-card {
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+.vc-slot-card:hover {
+  border-color: #3182ce;
+  background: #ebf8ff;
+}
+.vc-slot-card.selected {
+  border-color: #3182ce;
+  background: #bee3f8;
+}
+.vc-slot-card.booked {
+  border-color: #e2e8f0;
+  background: #f7fafc;
+  cursor: default;
+  opacity: 0.7;
+}
+.vc-slot-date {
+  font-weight: 600;
+  color: #1a365d;
+  font-size: 0.9rem;
+}
+.vc-slot-time {
+  color: #718096;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+/* Actions column */
+.vc-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Modal */
+.vc-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  animation: vc-fadeIn 0.15s ease;
+}
+@keyframes vc-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.vc-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: vc-slideUp 0.2s ease;
+}
+@keyframes vc-slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.vc-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.vc-modal-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+.vc-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #a0aec0;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+}
+.vc-modal-close:hover {
+  color: #e53e3e;
+}
