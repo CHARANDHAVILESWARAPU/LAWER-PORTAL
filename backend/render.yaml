@@ -2,13 +2,13 @@ services:
   - type: web
     name: lawyer-backend
     env: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate"
     startCommand: "gunicorn config.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.7
       - key: DJANGO_SETTINGS_MODULE
-        value: config.settings
+        value: config.settings_production
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG

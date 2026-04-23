@@ -1,4 +1,5 @@
 from .settings import *
+from datetime import timedelta
 import os
 import dj_database_url
 from pathlib import Path
@@ -30,7 +31,6 @@ DATABASES['default'] = dj_database_url.config(
 CORS_ALLOWED_ORIGINS = [
     'https://*.netlify.app',
     'http://localhost:3000',
-    'https://your-app.netlify.app',  # Update with actual
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -66,4 +66,4 @@ OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', 'sk-temp-placeholder')
 SIMPLE_JWT['ACCESS_TOKEN_LIFETIME'] = timedelta(minutes=30)
 SIMPLE_JWT['REFRESH_TOKEN_LIFETIME'] = timedelta(days=1)
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())  # Not needed for Render

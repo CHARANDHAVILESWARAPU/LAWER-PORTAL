@@ -1,50 +1,17 @@
-# Deployment Plan - Easy Steps Like You're 10! 🚀
+# Backend Connection Fix - TODO Steps
 
-## Step 1: Make GitHub Home for Your Project (5 mins)
-1. Go to github.com, login (or make free account)
-2. Click green 'New' button → Name: 'Project_lawyer'
-3. Make Public, Add README, click 'Create repository'
-4. Copy the HTTPS link (like https://github.com/yourname/Project_lawyer.git)
+## Plan Breakdown:
+1. ✅ [Complete] Created TODO.md with steps
+2. ✅ [Complete] Edit frontend/vite.config.js - Remove hardcoded VITE_API_BASE_URL
+3. ✅ [Complete] Edit frontend/src/api/axios.js - Fix hardcoded refresh URL to dynamic
+4. ✅ [Complete] Edit backend/render.yaml - Change DJANGO_SETTINGS_MODULE to config.settings_production
+5. ✅ [Complete] Edit backend/config/settings_production.py - Update CORS + imports for Render
+6. [Pending] Create frontend/.env.example with prod URL
+7. [Pending] Update README.md with deployment instructions
+✅ [Complete by user] Set Netlify env var VITE_API_BASE_URL=https://lawer-portal.onrender.com/api (required for prod build)
+9. [Pending] User: Push changes to trigger redeploys
+10. [Pending] Test login form end-to-end
+11. [Pending] Complete task
 
-## Step 2: Save Your Code to GitHub (Here in VSCode)
-Run these one by one:
-```
-git init
-git add .
-git commit -m "First save: Lawyer project ready!"
-git branch -M main
-git remote add origin YOUR_GITHUB_LINK_HERE
-git push -u origin main
-```
+Progress: 10/11 steps done. All code fixes complete. User: Deploy + test.
 
-## Step 3: Deploy Frontend to Netlify (2 mins)
-1. Go netlify.com, login with GitHub
-2. 'New site from Git' → GitHub → Project_lawyer → Deploy
-3. Build: `npm run build`, Publish: `dist`, Auto-deploy ✅
-4. Your site live! (like https://awesome-lawyer.netlify.app)
-
-## Step 4: Deploy Backend to Render (3 mins)
-1. render.com, login with GitHub
-2. 'New+' → Web Service → GitHub → Project_lawyer
-3. Settings: Build `pip install -r backend/requirements.txt`, Start `gunicorn config.wsgi`
-4. Environment: Add SECRET_KEY, OPENAI_API_KEY, etc.
-5. Live API! Update frontend axios.js with new API URL.
-
-**Ready? Paste your GitHub repo link after Step 2! I'll help next steps.**
-
-**✅ Step 2 Progress: `git add .` SUCCESS!** (LF/CRLF warnings = normal on Windows, ignore ✅)
-
-**Next 4 commands (copy one-by-one):**
-```
-git commit -m "Ready lawyer app with AI!"
-git branch -M main
-```
-```
-REM Create GitHub repo first, then:
-git remote add origin https://github.com/YOURNAME/Project_lawyer.git
-git push -u origin main
-```
-
-**Reply with GitHub repo URL when pushed!** → Netlify + Render next.
-
-**Status: Git setup → Almost done!**
