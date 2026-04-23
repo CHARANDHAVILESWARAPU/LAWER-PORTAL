@@ -48,3 +48,5 @@ OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', 'sk-temp-placeholder')
 # Simplified JWT for prod
 SIMPLE_JWT['ACCESS_TOKEN_LIFETIME'] = timedelta(minutes=30)
 SIMPLE_JWT['REFRESH_TOKEN_LIFETIME'] = timedelta(days=1)
+
+CSRF_TRUSTED_ORIGINS = ['https://lawer-portal.onrender.com']
